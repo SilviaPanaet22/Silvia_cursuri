@@ -7,7 +7,7 @@ meniu = """
 5 - Cautare in lista de cumparaturi
 """
 print(meniu)# Afisez meniul
-numar_selectat = int(input("Introduceti un numar intre 1 si 5: ")) # citesc numarul introdus
+numar_selectat = int(input("Introduceti un numar care se afla in intervalul [1,5]")) # citesc numarul introdus
 
 if numar_selectat == 1: # Verific ce optiune selectez
     print("Afisare lista de cumparaturi")
