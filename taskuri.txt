@@ -1,0 +1,10 @@
+Task: telefon
+Data limitã: 12.03.2012
+Persoana responsabilã: silvia
+Categorie: cadouri
+
+Task: reparare
+Data limitã: 12.09.2022
+Persoana responsabilã: silvia
+Categorie: cadouri
+
