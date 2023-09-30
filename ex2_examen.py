@@ -13,9 +13,9 @@ def element_majoritar(lista):
     if majoritare:
         return ', '.join(majoritare)
     else:
-        return "Nu există element majoritar."
+        return "Nu există element care sa fie majoritar."
 
-
+#exemple
 lista1 = [3, 2, 3]
 rezultat1 = element_majoritar(lista1)
 print(rezultat1)
