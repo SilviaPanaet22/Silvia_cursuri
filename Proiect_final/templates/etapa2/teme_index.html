@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a class="btn btn-primary" href="{% url 'etapa2:adaugare' %}">Adauga temele</a>
+    <table class="table">
+    <thead>
+    <tr>
+        <th>Index</th>
+        <th>Titlu</th>
+        <th>Materie</th>
+        <th>Descriere</th>
+        <th>State</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for item in 'lista.teme' %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ item.titlu}}</td>
+                <td>{{ item.materie }}</td>
+                <td>{{ item.descriere }}</td>
+                <td>{{ item.active }}</td>
+                <td></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+{% endblock %}
