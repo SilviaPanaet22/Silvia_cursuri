@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'etapa1',
+    'etapa2',
 ]
 
 MIDDLEWARE = [
