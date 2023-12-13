@@ -13,11 +13,13 @@ class TemeView(LoginRequiredMixin, ListView):
     model = Teme
     template_name = 'etapa2/teme_index.html'
 
+
 class CreateTeme(LoginRequiredMixin, CreateView):
-    model= Teme
-    fields=['titlu','materie', 'descriere']
+    model = Teme
+    # fields=['titlu', 'materie', 'descriere']
+    fields = '__all__'
     template_name='forms.html'
 
     def get_success_url(self):
-        return reverse('etapa2.lista_teme')
+        return reverse('etapa2:lista_teme')
 
