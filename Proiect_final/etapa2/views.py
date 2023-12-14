@@ -22,4 +22,3 @@ class CreateTeme(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse('etapa2:lista_teme')
-
