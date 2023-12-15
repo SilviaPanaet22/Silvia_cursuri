@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
     <a class="btn btn-primary" href="{% url 'etapa1:adaugare' %}">Adauga materii</a>
     <table class="table">
     <thead>
@@ -12,13 +13,22 @@
     </tr>
     </thead>
     <tbody>
-        {% for item in materie_list %}
+        {% for item in lista_materii %}
             <tr>
                 <td>{{ forloop.counter }}</td>
                 <td>{{ item.nume }}</td>
                 <td>{{ item.descriere }}</td>
                 <td>{{ item.active }}</td>
-                <td></td>
+                <td>
+                    <a class="btn btn-success" href="{% url 'etapa1:modifica' item.id %}">Editare</a>
+                    {% if item.active is True %}
+                       <a class="btn btn-info" href="{% url 'etapa1:dezactiveaza' item.id  %}">Dezactiveaza</a>
+                    {% endif %}
+                    {% if item.active is False %}
+                       <a class="btn btn-info" href="{% url 'etapa1:activeaza' item.id  %}">Activeaza</a>
+                    {% endif %}
+                    <a class="btn btn-danger" href="{% url 'etapa1:stergere' item.id %}">Sterge</a>
+                </td>
             </tr>
         {% endfor %}
     </tbody>

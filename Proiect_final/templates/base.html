@@ -1,24 +1,35 @@
 <html>
 <head>
-    <title>Materii </title>
+    <title>Materii</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
+    <style>
+        body {
+            background-color: #b9d4d0; /* Culoarea fundalului */
+        }
+        /* Specificitatea selectorului a fost mărită pentru a suprascrie stilurile Bootstrap */
+        .container .row .col-md-12 nav a.btn {
+            color: #003d7a; /* Albastru pentru textul link-urilor */
+            text-decoration: none; /* Înlătură sublinierea */
+        }
+        .container .row .col-md-12 nav a.btn:hover {
+            color: #003d7a; /* Albastru mai închis pentru textul link-urilor la hover */
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <nav>
-                <a class="btn" href="/admin/">Admin</a>
-                <a class="btn" href="{% url 'etapa1:lista_materii' %}">Materii</a>
-                <a class="btn" href="{% url 'etapa2:lista_teme' %}">Teme</a>
-
-            </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav>
+                    <a class="btn" href="/admin/">Admin</a>
+                    <a class="btn" href="{% url 'etapa1:lista_materii' %}">Materii</a>
+                    <a class="btn" href="{% url 'et2:lista_teme' %}">Teme</a>
+                    <a class="btn" href="{% url 'feedback:lista_feedback' %}">Feedback</a>
+                </nav>
+            </div>
         </div>
     </div>
-
-</div>
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

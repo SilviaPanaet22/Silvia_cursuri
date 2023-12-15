@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a class="btn btn-primary" href="{% url 'et2:adaugare' %}">Adaugare teme</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Index</th>
+            <th>Nume tema</th>
+            <th>Nume materie</th>
+            <th>Text Tema</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in lista_teme %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ item.nume_tema }}</td>
+                    <td>{{ item.nume_materie}}</td>
+                    <td>{{ item.text_tema }}</td>
+
+                    <td>{{ item.active }}</td>
+                    <td><a class="btn btn-success" href="{% url 'et2:modifica' item.id %}">Modifica</a></td>
+                     </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

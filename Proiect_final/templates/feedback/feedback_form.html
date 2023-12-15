@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a class="btn btn-primary" href="{% url 'feedback:adaugare' %}">Feedback</a>
+    <table class="table">
+    <thead>
+    <tr>
+        <th>Index</th>
+        <th>Nume materie</th>
+        <th>Profesor</th>
+        <th>Rating</th>
+        <th>Comentarii</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for item in lista_feedback %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ item.nume_curs }}</td>
+                <td>{{ item.profesor }}</td>
+                <td>{{ item.rating }}</td>
+                <td>{{ item.comentarii }}</td>
+                <td></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+{% endblock %}
