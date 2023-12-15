@@ -9,4 +9,5 @@ urlpatterns=[
     path('adaugare/',views.FeedbackCreateView.as_view(), name='adaugare'),
 
 
+
 ]

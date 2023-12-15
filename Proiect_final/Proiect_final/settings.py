@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'etapa1',
     'et2',
     'feedback',
+    'userprofile',
 ]
 
 MIDDLEWARE = [

@@ -25,5 +25,6 @@ urlpatterns = [
     path('materie/',include('etapa1.urls')),
     path('teme/', include('et2.urls')),
     path('feedback/',include('feedback.urls')),
+    path('userprofile/', include('userprofile.urls')),
 
 ]

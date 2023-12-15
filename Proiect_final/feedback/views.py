@@ -6,6 +6,7 @@ from django.views.generic import ListView, CreateView
 from django.urls import reverse_lazy
 from django.urls import reverse
 from feedback.models import FeedbackCurs
+from django.contrib.auth.decorators import login_required
 
 class FeedbackView(ListView):
     model=FeedbackCurs
@@ -20,3 +21,7 @@ class FeedbackCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('feedback:lista_feedback')
+
+
+
+
