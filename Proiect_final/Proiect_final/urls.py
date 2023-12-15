@@ -26,5 +26,6 @@ urlpatterns = [
     path('teme/', include('et2.urls')),
     path('feedback/',include('feedback.urls')),
     path('userprofile/', include('userprofile.urls')),
+    path("my_api/", include('my_api.urls')),
 
 ]

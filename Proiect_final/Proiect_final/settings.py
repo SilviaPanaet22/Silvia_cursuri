@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'et2',
     'feedback',
     'userprofile',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
